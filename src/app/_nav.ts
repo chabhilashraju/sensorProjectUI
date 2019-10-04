@@ -48,12 +48,17 @@ export const navItems: NavData[] = [
     icon: 'icon-pencil'
   },
   {
-    name: 'Inverter Rooms',
+    name: 'Sub Stations',
     url: '/dashboard',
     icon: 'icon-cursor',
     children: [
       {
-        name: 'Inverter Room 1',
+        name: 'Sub station 1',
+        url: '/dashboard',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Sub station 2',
         url: '/dashboard',
         icon: 'icon-puzzle'
       }

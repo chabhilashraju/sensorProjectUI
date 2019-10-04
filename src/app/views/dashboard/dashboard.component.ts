@@ -53,7 +53,7 @@ export class DashboardComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels: string[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartLabels: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'July', 'Aug'];
   public barChartType = 'bar';
   public barChartLegend = true;
 
