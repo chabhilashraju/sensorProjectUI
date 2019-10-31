@@ -2,19 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import { ChartService } from '../../shared/chart-service.service';
 
 @Component({
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
 
+  constructor(private chartServiceApi: ChartService) { }
+  requestJson: any;
+  lineChartDataValue: any;
+  stringval: any;
+  lineChartDataValueTemp: any;
+
   // lineChart
   public lineChartData: Array<any> = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' },
-    { data: [18, 48, 77, 9, 100, 27, 40], label: 'Series C' }
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' }
   ];
-  public lineChartLabels: Array<any> = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  public lineChartLabels: Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
   public lineChartOptions: any = {
     animation: false,
     responsive: true
@@ -53,16 +58,16 @@ export class DashboardComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels: string[] = ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'July', 'Aug'];
+  public barChartLabels: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
   public barChartType = 'bar';
   public barChartLegend = true;
 
   public barChartData: any[] = [
-    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' },
-    { data: [28, 48, 40, 19, 86, 27, 90], label: 'Series B' }
+    { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' }
   ];
 
 
+  // tslint:disable-next-line: no-inferrable-types
   radioModel: string = 'Month';
 
   // lineChart1
@@ -233,7 +238,7 @@ export class DashboardComponent implements OnInit {
   public barChart1Data: Array<any> = [
     {
       data: [78, 81, 80, 45, 34, 12, 40, 78, 81, 80, 45, 34, 12, 40, 12, 40],
-      label: 'Series A'
+      label: 'Device X0390838'
     }
   ];
   public barChart1Labels: Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16'];
@@ -287,7 +292,7 @@ export class DashboardComponent implements OnInit {
     }
   ];
   /* tslint:disable:max-line-length */
-  public mainChartLabels: Array<any> = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Thursday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  public mainChartLabels: Array<any> = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
   /* tslint:enable:max-line-length */
   public mainChartOptions: any = {
     tooltips: {
@@ -311,16 +316,16 @@ export class DashboardComponent implements OnInit {
         },
         ticks: {
           callback: function (value: any) {
-            return value.charAt(0);
+            return value;
           }
         }
       }],
       yAxes: [{
         ticks: {
           beginAtZero: true,
-          maxTicksLimit: 5,
-          stepSize: Math.ceil(250 / 5),
-          max: 250
+          maxTicksLimit: 5
+         // stepSize: Math.ceil(250 / 5),
+         // max: 250
         }
       }]
     },
@@ -440,6 +445,44 @@ export class DashboardComponent implements OnInit {
       this.mainChartData2.push(this.random(80, 100));
       this.mainChartData3.push(65);
     }
+
+    // this.lineChartDataValue = [{
+    //   data: [], label: 'Device X0390838'
+
+    // }];
+
+  }
+
+  onChange(event) {
+
+    console.log(event.target.value);
+
+    this.requestJson = event.target.value;
+
+
+    this.chartServiceApi.getDetails(this.requestJson).subscribe(val => {
+
+      // this.stringval = JSON.stringify(data);
+      // this.stringval.replace(/"/g, '');
+      console.log(val);
+      this.lineChartData = val;
+      this.barChartData = val;
+      this.mainChartData = val;
+
+      // console.log(Object.values(data).forEach(val => {
+      //   console.log(val['rphvol']);
+      //   if (val['rphvol'] !== undefined) {
+      //     this.lineChartDataValue[0]['data'].push(val['rphvol']);
+      //   }
+      // }
+      // ));
+
+      // console.log(this.lineChartDataValue);
+      // this.lineChartData = this.lineChartDataValue;
+      // this.barChartData = this.lineChartDataValue;
+    });
+
+
   }
 
 
