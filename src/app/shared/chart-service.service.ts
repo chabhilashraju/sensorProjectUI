@@ -12,9 +12,9 @@ export class ChartService {
     constructor(private http: HttpClient) { }
 
     // URLS
-    chartApiUrl = 'http://34.204.98.79:8089/message/getVoltage/X0390838/25:10:2019';
+    chartApiUrl = 'https://vqasnyrloi.execute-api.us-east-1.amazonaws.com/dev/message/getVoltage';
 
-    studentRegisterApiUrl = 'https://trznm8ccsi.execute-api.us-east-1.amazonaws.com/dev/student/registration';
+    studentRegisterApiUrl = 'https://vqasnyrloi.execute-api.us-east-1.amazonaws.com/dev/message/getVoltage';
 
     studentCreateRequestApiUrl = 'http://34.204.98.79:8086/message/getVoltage/';
 
@@ -26,25 +26,21 @@ export class ChartService {
     =========================================*/
 
     // Http Options
+    // Http Options
     httpOptions = {
         headers: new HttpHeaders({
-            // 'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': '*',
-            // 'Access-Control-Allow-Credentials': 'true',
-            'Access-Control-Allow-Headers': 'Content-Type,X-Amz-Date,Authorization,X-Api-Key'
-
+            'Content-Type': 'application/json'
         })
     };
 
-    // HttpClient API get() method => Fetch Student
-    getDetails(studentRequestDetails): Observable<any> {
-        return this.http.get<any>(this.studentCreateRequestApiUrl + studentRequestDetails)
-            .pipe(
-                retry(1),
-                catchError(this.handleError)
-            );
-    }
+    // // HttpClient API get() method => Fetch Student
+    // getDetails(studentRequestDetails): Observable<any> {
+    //     return this.http.get<any>(this.studentCreateRequestApiUrl + studentRequestDetails)
+    //         .pipe(
+    //             retry(1),
+    //             catchError(this.handleError)
+    //         );
+    // }
 
 
     // // HttpClient API get() method => Fetch Student
@@ -58,13 +54,13 @@ export class ChartService {
 
 
     // // HttpClient API post() method => Create Student
-    // studentRegistration(studentRequestDetails): Observable<Student> {
-    //     return this.http.post<Student>(this.studentRegisterApiUrl, JSON.stringify(studentRequestDetails), this.httpOptions)
-    //         .pipe(
-    //             retry(1),
-    //             catchError(this.handleError)
-    //         );
-    // }
+    getDetails(chartDate): Observable<any> {
+        return this.http.post<any>(this.chartApiUrl, JSON.stringify(chartDate), this.httpOptions)
+            .pipe(
+                retry(1),
+                catchError(this.handleError)
+            );
+    }
 
     // // HttpClient API post() method => Create Student Request
     // studentCreateRequest(studentRequestDetails): Observable<Student> {

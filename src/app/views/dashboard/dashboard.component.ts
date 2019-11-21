@@ -324,8 +324,8 @@ export class DashboardComponent implements OnInit {
         ticks: {
           beginAtZero: true,
           maxTicksLimit: 5
-         // stepSize: Math.ceil(250 / 5),
-         // max: 250
+          // stepSize: Math.ceil(250 / 5),
+          // max: 250
         }
       }]
     },
@@ -457,7 +457,10 @@ export class DashboardComponent implements OnInit {
 
     console.log(event.target.value);
 
-    this.requestJson = event.target.value;
+    this.requestJson = {
+      'timestamp': event.target.value
+    };
+
 
 
     this.chartServiceApi.getDetails(this.requestJson).subscribe(val => {
