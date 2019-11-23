@@ -53,12 +53,7 @@ export const navItems: NavData[] = [
     icon: 'icon-cursor',
     children: [
       {
-        name: 'Sub station 1',
-        url: '/dashboard',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Sub station 2',
+        name: 'SMC',
         url: '/dashboard',
         icon: 'icon-puzzle'
       }

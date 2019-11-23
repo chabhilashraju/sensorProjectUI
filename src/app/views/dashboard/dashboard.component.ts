@@ -19,7 +19,7 @@ export class DashboardComponent implements OnInit {
   public lineChartData: Array<any> = [
     { data: [65, 59, 80, 81, 56, 55, 40], label: 'Series A' }
   ];
-  public lineChartLabels: Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+  public lineChartLabels: Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
   public lineChartOptions: any = {
     animation: false,
     responsive: true
@@ -58,7 +58,8 @@ export class DashboardComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  // tslint:disable-next-line: max-line-length
+  public barChartLabels: string[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24'];
   public barChartType = 'bar';
   public barChartLegend = true;
 
@@ -445,20 +446,14 @@ export class DashboardComponent implements OnInit {
       this.mainChartData2.push(this.random(80, 100));
       this.mainChartData3.push(65);
     }
-
-    // this.lineChartDataValue = [{
-    //   data: [], label: 'Device X0390838'
-
-    // }];
-
   }
 
-  onChange(event) {
+  onSubmit(formData) {
 
-    console.log(event.target.value);
-
+    console.log(formData);
     this.requestJson = {
-      'timestamp': event.target.value
+      'timestamp': formData.dateId,
+      'deviceName': formData.deviceId
     };
 
 

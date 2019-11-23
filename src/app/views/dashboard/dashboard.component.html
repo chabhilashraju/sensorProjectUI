@@ -103,33 +103,53 @@
   <!--/.row-->
   <div class="card">
     <div class="card-body">
-      <div class="row">
-        <div class="col-sm-5">
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label" for="select1">Select Date</label>
-            <div class="col-md-9">
-              <select class="form-control" (change)="onChange($event)" id="select1" name="select1">
-                <option value="0">Please select</option>
-                <option value="17:11:2019">17:11:2019</option>
-                <option value="18:11:2019">18:11:2019</option>
-                <option value="19:11:2019">19:11:2019</option>
-                <option value="20:11:2019">20:11:2019</option>
-                <option value="21:11:2019">21:11:2019</option>
-                <option value="22:11:2019">22:11:2019</option>
-                <option value="23:11:2019">23:11:2019</option>
-                <option value="24:11:2019">24:11:2019</option>
-                <option value="25:11:2019">25:11:2019</option>
-                <option value="26:11:2019">26:11:2019</option>
-                <option value="27:11:2019">27:11:2019</option>
-
-              </select>
+      <form name="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm" novalidate>
+        <div class="row">
+          <div class="col-sm-5">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="deviceId">Select Device</label>
+              <div class="col-md-9">
+                <select class="form-control"  [(ngModel)]="deviceVal"  #deviceId="ngModel"  id="deviceId" name="deviceId">
+                  <option value="0">Please select</option>
+                  <option value="smc01">SMC01</option>
+                  <option value="smc02">SMC02</option>
+                  <option value="smc03">SMC03</option>
+                  <option value="smc04">SMC04</option>
+                </select>
+              </div>
             </div>
           </div>
-        </div>
-        <!--/.col-->
+          <div class="col-sm-5">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="dateId">Select Date</label>
+              <div class="col-md-9">
+                <select class="form-control"   [(ngModel)]="dateVal" #dateId="ngModel" id="dateId" name="dateId">
+                  <option value="0">Please select</option>
+                  <option value="17:11:2019">17:11:2019</option>
+                  <option value="18:11:2019">18:11:2019</option>
+                  <option value="19:11:2019">19:11:2019</option>
+                  <option value="20:11:2019">20:11:2019</option>
+                  <option value="21:11:2019">21:11:2019</option>
+                  <option value="22:11:2019">22:11:2019</option>
+                  <option value="23:11:2019">23:11:2019</option>
+                  <option value="24:11:2019">24:11:2019</option>
+                  <option value="25:11:2019">25:11:2019</option>
+                  <option value="26:11:2019">26:11:2019</option>
+                  <option value="27:11:2019">27:11:2019</option>
 
-        <!--/.col-->
-      </div>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--/.col-->
+          <div class="col-sm-5">
+            <div class="form-group row">
+              <button class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+          <!--/.col-->
+        </div>
+      </form>
       <!--/.row-->
 
     </div>
