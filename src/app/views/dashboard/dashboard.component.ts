@@ -282,14 +282,6 @@ export class DashboardComponent implements OnInit {
     {
       data: this.mainChartData1,
       label: 'Current'
-    },
-    {
-      data: this.mainChartData2,
-      label: 'Previous'
-    },
-    {
-      data: this.mainChartData3,
-      label: 'BEP'
     }
   ];
   /* tslint:disable:max-line-length */
@@ -457,27 +449,12 @@ export class DashboardComponent implements OnInit {
     };
 
 
-
     this.chartServiceApi.getDetails(this.requestJson).subscribe(val => {
 
-      // this.stringval = JSON.stringify(data);
-      // this.stringval.replace(/"/g, '');
       console.log(val);
-      this.lineChartData = val;
-      this.barChartData = val;
-      this.mainChartData = val;
-
-      // console.log(Object.values(data).forEach(val => {
-      //   console.log(val['rphvol']);
-      //   if (val['rphvol'] !== undefined) {
-      //     this.lineChartDataValue[0]['data'].push(val['rphvol']);
-      //   }
-      // }
-      // ));
-
-      // console.log(this.lineChartDataValue);
-      // this.lineChartData = this.lineChartDataValue;
-      // this.barChartData = this.lineChartDataValue;
+      this.lineChartData = val.current;
+      this.barChartData = val.powerFactor;
+      this.mainChartData = val.voltage;
     });
 
 

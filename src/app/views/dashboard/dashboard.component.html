@@ -109,21 +109,47 @@
             <div class="form-group row">
               <label class="col-md-3 col-form-label" for="deviceId">Select Device</label>
               <div class="col-md-9">
-                <select class="form-control"  [(ngModel)]="deviceVal"  #deviceId="ngModel"  id="deviceId" name="deviceId">
+                <select class="form-control" [(ngModel)]="deviceVal" #deviceId="ngModel" id="deviceId" name="deviceId">
                   <option value="0">Please select</option>
-                  <option value="smc01">SMC01</option>
-                  <option value="smc02">SMC02</option>
-                  <option value="smc03">SMC03</option>
-                  <option value="smc04">SMC04</option>
+                  <option value="smc01">SMC - 01</option>
+                  <option value="smc02">SMC - 02</option>
+                  <option value="smc03">SMC - 03</option>
+                  <option value="smc04">SMC - 04</option>
+                  <option value="3mld01">3mld plant - 01</option>
+                  <option value="5mld01">5mld plant - 01</option>
+                  <option value="anc01">ANC - 01</option>
+                  <option value="anc02">ANC - 02</option>
+                  <option value="anc03">ANC - 03</option>
+                  <option value="anc04">ANC - 04</option>
+                  <option value="anc05">ANC - 05</option>
+                  <option value="atc01">ATC - 01</option>
+                  <option value="atc01">ATC - 02</option>
+                  <option value="atc01">ATC - 03</option>
+                  <option value="dpw01">DPW - 01</option>
+                  <option value="dtype01">DTYPE - 01</option>
+                  <option value="gnc01">GNC - 01</option>
+                  <option value="gnc02">GNC - 02</option>
+
+                  <option value="spt01">SPT - 01</option>
+
+                  <option value="balaji1n01">Balaji nagar1 - 01</option>
+
+                  <option value="balaji2n01">Balaji nagar2 - 01</option>
+
+                  <option value="fhnew01">Filter House new - 01</option>
+
+                  <option value="fhnew02">Filter House new - 02</option>
+
+
                 </select>
               </div>
             </div>
           </div>
-          <div class="col-sm-5">
+          <div class="col-sm-4">
             <div class="form-group row">
               <label class="col-md-3 col-form-label" for="dateId">Select Date</label>
               <div class="col-md-9">
-                <select class="form-control"   [(ngModel)]="dateVal" #dateId="ngModel" id="dateId" name="dateId">
+                <select class="form-control" [(ngModel)]="dateVal" #dateId="ngModel" id="dateId" name="dateId">
                   <option value="0">Please select</option>
                   <option value="17:11:2019">17:11:2019</option>
                   <option value="18:11:2019">18:11:2019</option>
@@ -142,7 +168,7 @@
             </div>
           </div>
           <!--/.col-->
-          <div class="col-sm-5">
+          <div class="col-sm-2">
             <div class="form-group row">
               <button class="btn btn-primary">Submit</button>
             </div>
@@ -200,7 +226,7 @@
       <div class="row">
         <div class="col-sm-5">
           <h4 class="card-title mb-0">Readings</h4>
-          <div class="small text-muted">October 2019</div>
+          <div class="small text-muted">Voltge</div>
         </div>
         <!--/.col-->
         <div class="col-sm-7 d-none d-md-block">
@@ -272,7 +298,7 @@
         <div class="card-columns cols-2">
           <div class="card">
             <div class="card-header">
-              Instant Power
+              Current
               <div class="card-header-actions">
                 <!-- <a href="http://www.chartjs.org">
                   <small class="text-muted">docs</small>
@@ -290,7 +316,7 @@
           </div>
           <div class="card">
             <div class="card-header">
-              Energy
+              Power
               <div class="card-header-actions">
                 <!-- <a href="http://www.chartjs.org">
                   <small class="text-muted">docs</small>

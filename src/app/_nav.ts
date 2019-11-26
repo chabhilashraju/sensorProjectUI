@@ -52,11 +52,11 @@ export const navItems: NavData[] = [
     url: '/dashboard',
     icon: 'icon-cursor',
     children: [
-      {
-        name: 'SMC',
-        url: '/dashboard',
-        icon: 'icon-puzzle'
-      }
+      // {
+      //   name: 'SMC',
+      //   url: '/dashboard',
+      //   icon: 'icon-puzzle'
+      // }
     ]
   },
   // {
