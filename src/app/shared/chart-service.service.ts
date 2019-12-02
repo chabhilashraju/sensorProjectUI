@@ -12,7 +12,7 @@ export class ChartService {
     constructor(private http: HttpClient) { }
 
     // URLS
-    chartApiUrl = 'http://18.207.201.37:8086/message/getVoltage';
+    chartApiUrl = 'http://18.207.201.37:8089/message/getVoltage';
 
     studentRegisterApiUrl = 'https://vqasnyrloi.execute-api.us-east-1.amazonaws.com/dev/message/getVoltage';
 
