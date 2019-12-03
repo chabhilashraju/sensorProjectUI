@@ -14,6 +14,326 @@ export class DashboardComponent implements OnInit {
   lineChartDataValue: any;
   stringval: any;
   lineChartDataValueTemp: any;
+subStationDevices: any;
+  subStaionList = {
+    subStation: [{
+
+      name: 'SMC',
+      val: 'smc'
+
+    }, {
+
+      name: 'ATC',
+      val: 'atc'
+
+    }, {
+
+      name: 'Narayanagiri',
+      val: 'narayanagiri'
+
+    }, {
+
+      name: 'SV Museum',
+      val: 'svmuseum'
+
+    }, {
+
+      name: 'Vaikuntam2',
+      val: 'vaikuntam2'
+
+    }, {
+
+      name: 'Sevasadan',
+      val: 'sevasadan'
+
+    }, {
+
+      name: 'DPW',
+      val: 'dpw'
+
+    }, {
+
+      name: 'Rbgh rambagicha',
+      val: 'rbghrambagicha'
+
+    }, {
+
+      name: 'Varahaswamy vsgh',
+      val: 'varahaswamyvsgh'
+
+    }, {
+
+      name: '33/11kv substation',
+      val: '33/11kvsubstation'
+
+    }, {
+
+      name: 'ANC',
+      val: 'anc'
+
+    }, {
+
+      name: 'GNC',
+      val: 'gnc'
+
+    }, {
+
+      name: 'HVC',
+      val: 'hvc'
+
+    }, {
+
+      name: 'CRO',
+      val: 'cro'
+
+    }, {
+
+      name: 'FILTER HOUSE',
+      val: 'filterhouse'
+
+    }, {
+
+      name: 'Sujalan Windmill',
+      val: 'sujalanwindmill'
+
+    }, {
+
+      name: 'Akasa Ganga',
+      val: 'akasaganga'
+
+    }, {
+
+      name: 'Papanasam',
+      val: 'papanasam'
+
+    }, {
+
+      name: 'ggdam',
+      val: 'GG Dam'
+
+    }, {
+
+      name: 'Pandava Theertham',
+      val: 'pandavatheertham'
+
+    }, {
+
+      name: 'Dtype',
+      val: 'dtype'
+
+    }, {
+
+      name: 'Kpdam',
+      val: 'kpdam'
+
+    }, {
+
+      name: 'Dharmagiri',
+      val: 'dharmagiri'
+
+    }, {
+
+      name: 'Indoor substation',
+      val: 'indoorsubstation'
+
+    }, {
+
+      name: '3mld plant',
+      val: '3mldplant'
+
+    }, {
+
+      name: 'Balaji Nagar2',
+      val: 'balajinagar2'
+
+    }, {
+
+      name: 'Balaji Nagar1',
+      val: 'balajinagar1'
+
+    }, {
+
+      name: '5mld plant',
+      val: '5mldplant'
+
+    }, {
+
+      name: 'SPT',
+      val: 'spt'
+
+    }, {
+
+      name: 'BSM',
+      val: 'bsm'
+
+    }, {
+
+      name: 'PPC',
+      val: 'ppc'
+
+    }, {
+
+      name: 'VQC 1',
+      val: 'vqc1'
+
+    }, {
+
+      name: 'Murthynayanicheruvu',
+      val: 'murthynayanicheruvu'
+
+    }, {
+
+      name: 'Vijayamalya Guest House',
+      val: 'vijayamalyaguesthouse'
+
+    }, {
+
+      name: '7th Mail',
+      val: '7thmail'
+
+    }, {
+
+      name: 'Japalitheertham',
+      val: 'japalitheertham'
+
+    }
+
+    ]
+
+
+  };
+
+  subStationDeviceList = {
+    smc:
+      [
+        {
+          name: 'SMC - 01 - Generator',
+          val: 'smc01'
+        },
+        {
+          name: 'SMC - 02 - Transformer',
+          val: 'smc02'
+        },
+        {
+          name: 'SMC - 03 - Transformer',
+          val: 'smc03'
+        },
+        {
+          name: 'SMC - 04 - Generator',
+          val: 'smc04'
+        }
+      ],
+    atc:
+      [
+        {
+          name: 'ATC - 01 - Generator',
+          val: 'atc01'
+        },
+        {
+          name: 'ATC - 02 - Generator',
+          val: 'atc02'
+        },
+        {
+          name: 'ATC - 03 - Transformer',
+          val: 'atc03'
+        }
+      ],
+    narayanagiri: [
+      {
+        name: 'NARGIRI - 01 - Transformer',
+        val: 'nargiri01'
+      },
+      {
+        name: 'NARGIRI - 02 - Transformer',
+        val: 'nargiri02'
+      },
+      {
+        name: 'NARGIRI - 03 - Transformer',
+        val: 'nargiri03'
+      }
+    ],
+    svmuseum: [
+      {
+        name: 'SVM - 01 - Generator',
+        val: 'svm01'
+      }, {
+        name: 'SVM - 02 - Transformer',
+        val: 'svm02'
+      }, {
+        name: 'SVM - 03 - Generator',
+        val: 'svm03'
+      }, {
+        name: 'SVM - 04 - Transformer',
+        val: 'svm04'
+      }, {
+        name: 'SVM - 05 - Transformer',
+        val: 'svm05'
+      }], vaikuntam2: [{
+        name: 'VKM - 01 - Transformer',
+        val: 'vkm01'
+      }, {
+        name: 'VKM - 02 - Transformer',
+        val: 'vkm02'
+      }, {
+        name: 'VKM - 03 - Transformer',
+        val: 'vkm03'
+      }, {
+        name: 'VKM - 04 - Transformer',
+        val: 'vkm04'
+      }, {
+        name: 'VKM - 05 - Transformer',
+        val: 'vkm05'
+      }, {
+        name: 'VKM - 06 - Transformer',
+        val: 'vkm06'
+      }], sevasadan: [{
+        name: 'SVSD - 01 - Generator',
+        val: 'svsd01'
+      }, {
+        name: 'SVSD - 02 - Transformer',
+        val: 'svsd02'
+      }, {
+        name: 'SVSD - 03 - Generator',
+        val: 'svsd03'
+      }, {
+        name: 'SVSD - 04 - Transformer',
+        val: 'svsd04'
+      }], dpw: [{
+        name: 'DPW - 01 - Transformer',
+        val: 'dpw01'
+      }], rbghrambagicha: [{
+        name: 'RBGH - 01 - Transformer',
+        val: 'rbgh01'
+      }, {
+        name: 'RBGH - 02 - Transformer',
+        val: 'rbgh02'
+      }, {
+        name: 'RBGH - 03 - Transformer',
+        val: 'rbgh03'
+      }, {
+        name: 'RBGH - 04 - Transformer',
+        val: 'rbgh04'
+      }, {
+        name: 'RBGH - 05 - Transformer',
+        val: 'rbgh05'
+      }, {
+        name: 'RBGH - 06 - Transformer',
+        val: 'rbgh06'
+      }, {
+        name: 'RBGH - 01 - Transformer',
+        val: 'rbgh01'
+      }, {
+        name: 'RBGH - 07 - Transformer',
+        val: 'rbgh07'
+      }], varahaswamyvsgh: [{
+        name: 'VSGH - 01 - Generator',
+        val: 'vsgh01'
+      }, {
+        name: 'VSGH - 02 - Transformer',
+        val: 'vsgh02'
+      }]
+  };
+  
 
   // lineChart
   public lineChartData: Array<any> = [
@@ -459,6 +779,12 @@ export class DashboardComponent implements OnInit {
 
 
   }
+    onChange(deviceValue) {
+    console.log(deviceValue);
 
+    this.subStationDevices = this.subStationDeviceList[deviceValue];
+
+  }
+  
 
 }
