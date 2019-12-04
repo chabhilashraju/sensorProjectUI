@@ -64,7 +64,7 @@ subStationDevices: any;
     }, {
 
       name: '33/11kv substation',
-      val: '33/11kvsubstation'
+      val: 'kvsubstation'
 
     }, {
 
@@ -108,8 +108,8 @@ subStationDevices: any;
 
     }, {
 
-      name: 'ggdam',
-      val: 'GG Dam'
+      name: 'GG DAM',
+      val: 'ggdam'
 
     }, {
 
@@ -139,7 +139,7 @@ subStationDevices: any;
     }, {
 
       name: '3mld plant',
-      val: '3mldplant'
+      val: 'mld3plant'
 
     }, {
 
@@ -154,7 +154,7 @@ subStationDevices: any;
     }, {
 
       name: '5mld plant',
-      val: '5mldplant'
+      val: 'mld5plant'
 
     }, {
 
@@ -189,7 +189,7 @@ subStationDevices: any;
     }, {
 
       name: '7th Mail',
-      val: '7thmail'
+      val: 'th7mail'
 
     }, {
 
@@ -268,72 +268,263 @@ subStationDevices: any;
       }, {
         name: 'SVM - 05 - Transformer',
         val: 'svm05'
-      }], vaikuntam2: [{
-        name: 'VKM - 01 - Transformer',
-        val: 'vkm01'
-      }, {
-        name: 'VKM - 02 - Transformer',
-        val: 'vkm02'
-      }, {
-        name: 'VKM - 03 - Transformer',
-        val: 'vkm03'
-      }, {
-        name: 'VKM - 04 - Transformer',
-        val: 'vkm04'
-      }, {
-        name: 'VKM - 05 - Transformer',
-        val: 'vkm05'
-      }, {
-        name: 'VKM - 06 - Transformer',
-        val: 'vkm06'
-      }], sevasadan: [{
-        name: 'SVSD - 01 - Generator',
-        val: 'svsd01'
-      }, {
-        name: 'SVSD - 02 - Transformer',
-        val: 'svsd02'
-      }, {
-        name: 'SVSD - 03 - Generator',
-        val: 'svsd03'
-      }, {
-        name: 'SVSD - 04 - Transformer',
-        val: 'svsd04'
-      }], dpw: [{
-        name: 'DPW - 01 - Transformer',
-        val: 'dpw01'
-      }], rbghrambagicha: [{
-        name: 'RBGH - 01 - Transformer',
-        val: 'rbgh01'
-      }, {
-        name: 'RBGH - 02 - Transformer',
-        val: 'rbgh02'
-      }, {
-        name: 'RBGH - 03 - Transformer',
-        val: 'rbgh03'
-      }, {
-        name: 'RBGH - 04 - Transformer',
-        val: 'rbgh04'
-      }, {
-        name: 'RBGH - 05 - Transformer',
-        val: 'rbgh05'
-      }, {
-        name: 'RBGH - 06 - Transformer',
-        val: 'rbgh06'
-      }, {
-        name: 'RBGH - 01 - Transformer',
-        val: 'rbgh01'
-      }, {
-        name: 'RBGH - 07 - Transformer',
-        val: 'rbgh07'
-      }], varahaswamyvsgh: [{
-        name: 'VSGH - 01 - Generator',
-        val: 'vsgh01'
-      }, {
-        name: 'VSGH - 02 - Transformer',
-        val: 'vsgh02'
-      }]
+      }],
+    vaikuntam2: [{
+      name: 'VKM - 01 - Transformer',
+      val: 'vkm01'
+    }, {
+      name: 'VKM - 02 - Transformer',
+      val: 'vkm02'
+    }, {
+      name: 'VKM - 03 - Transformer',
+      val: 'vkm03'
+    }, {
+      name: 'VKM - 04 - Transformer',
+      val: 'vkm04'
+    }, {
+      name: 'VKM - 05 - Transformer',
+      val: 'vkm05'
+    }, {
+      name: 'VKM - 06 - Transformer',
+      val: 'vkm06'
+    }],
+    sevasadan: [{
+      name: 'SVSD - 01 - Generator',
+      val: 'svsd01'
+    }, {
+      name: 'SVSD - 02 - Transformer',
+      val: 'svsd02'
+    }, {
+      name: 'SVSD - 03 - Generator',
+      val: 'svsd03'
+    }, {
+      name: 'SVSD - 04 - Transformer',
+      val: 'svsd04'
+    }], dpw: [{
+      name: 'DPW - 01 - Transformer',
+      val: 'dpw01'
+    }],
+
+    rbghrambagicha: [{
+      name: 'RBGH - 01 - Transformer',
+      val: 'rbgh01'
+    }, {
+      name: 'RBGH - 02 - Transformer',
+      val: 'rbgh02'
+    }, {
+      name: 'RBGH - 03 - Transformer',
+      val: 'rbgh03'
+    }, {
+      name: 'RBGH - 04 - Transformer',
+      val: 'rbgh04'
+    }, {
+      name: 'RBGH - 05 - Transformer',
+      val: 'rbgh05'
+    }, {
+      name: 'RBGH - 06 - Transformer',
+      val: 'rbgh06'
+    }, {
+      name: 'RBGH - 01 - Transformer',
+      val: 'rbgh01'
+    }, {
+      name: 'RBGH - 07 - Transformer',
+      val: 'rbgh07'
+    }],
+    varahaswamyvsgh: [{
+      name: 'VSGH - 01 - Generator',
+      val: 'vsgh01'
+    }, {
+      name: 'VSGH - 02 - Transformer',
+      val: 'vsgh02'
+    }, {
+      name: 'VSGH - 03 - Transformer',
+      val: 'vsgh03'
+    }, {
+      name: 'VSGH - 04 - Transformer',
+      val: 'vsgh03'
+    }],
+    kvsubstation: [{
+      name: '33kv - 01 - Transformer',
+      val: '33kv01'
+    }, {
+      name: '33kv - 02 - Transformer',
+      val: '33kv02'
+    }, {
+      name: '33kv - 03 - Transformer',
+      val: '33kv03'
+    }, {
+      name: '33kv - 04 - Transformer',
+      val: '33kv04'
+    }, {
+      name: '33kv - 05 - Transformer',
+      val: '33kv05'
+    }, {
+      name: '33kv - 06 - Transformer',
+      val: '33kv06'
+    }, {
+      name: '33kv - 07 - Transformer',
+      val: '33kv07'
+    }],
+    anc: [{
+      name: 'ANC - 01 - Generator',
+      val: 'anc01'
+    }, {
+      name: 'ANC - 02 - Transformer',
+      val: 'anc02'
+    }, {
+      name: 'ANC - 03 - Generator',
+      val: 'anc03'
+    }, {
+      name: 'ANC - 04 - Transformer',
+      val: 'anc04'
+    }, {
+      name: 'ANC - 05 - Transformer',
+      val: 'anc05'
+    }],
+    gnc: [{
+      name: 'GNC - 01 - Transformer',
+      val: 'gnc01'
+    }, {
+      name: 'GNC - 02 - Generator',
+      val: 'gnc02'
+    }],
+    hvc: [{
+      name: 'HVC',
+      val: 'hvc01'
+    }],
+    cro: [{
+      name: 'CRO',
+      val: 'cro'
+    }],
+    filterhouse: [{
+      name: 'FILTER HOUSE',
+      val: 'filterhouse'
+    }],
+    sujalanwindmill: [{
+      name: 'Sujalan Wind mill',
+      val: 'sujalanwindmill'
+    }],
+    akasaganga: [{
+      name: 'Akasa Ganga Pump - 01',
+      val: 'akgpump01'
+    }, {
+      name: 'Akasa Ganga Pump - 02',
+      val: 'akgpump02'
+    }],
+    papanasam: [{
+      name: 'Papanasam - 01 - Transformer',
+      val: 'pnsm01'
+    }],
+    ggdam: [{
+      name: 'GG DAM - 01 - Transformer',
+      val: 'ggdam01'
+    }],
+    pandavatheertham: [{
+      name: 'Pandavatheertham',
+      val: 'pandavatheertham'
+    }],
+    dtype: [{
+      name: 'Dtype - 01 - Transformer',
+      val: 'dtype01'
+    }],
+    kpdam: [{
+      name: 'KPDAM - 01 - Transformer',
+      val: 'kpdam01'
+    }, {
+      name: 'KPDAM - 02 - Transformer',
+      val: 'kpdam02'
+    }],
+    dharmagiri: [{
+      name: 'Dharmagiri - 01 - Generator',
+      val: 'dgiri01'
+    }, {
+      name: 'Dharmagiri - 02 - Transformer',
+      val: 'dgiri02'
+    }, {
+      name: 'Dharmagiri - 03 - Transformer',
+      val: 'dgiri03'
+    }],
+    indoorsubstation: [{
+      name: 'INDSS - 01 - Generator',
+      val: 'indss01'
+    }, {
+      name: 'INDSS - 02 - Generator',
+      val: 'indss02'
+    }],
+    mld3plant: [{
+      name: '3mld plant - 01 - Transformer',
+      val: '3mld01'
+    }],
+    balajinagar1: [{
+      name: 'Balaji nagar1 - 01 - Transformer',
+      val: 'balaji1n01'
+    }],
+    balajinagar2: [{
+      name: 'Balaji nagar2 - 01 - Transformer',
+      val: 'balaji2n01'
+    }],
+    mld5plant: [{
+      name: '5mld plant - 01 - Transformer',
+      val: '5mld01'
+    }],
+    spt: [{
+      name: 'SPT - 01 - Transformer',
+      val: 'spt01'
+    }],
+    bsm: [{
+      name: 'BSM - 01 - Generator',
+      val: 'bsm01'
+    }, {
+      name: 'BSM - 02 - Transformer',
+      val: 'bsm02'
+    }, {
+      name: 'BSM - 03 - Transformer',
+      val: 'bsm03'
+    }, {
+      name: 'BSM - 04 - Transformer',
+      val: 'bsm04'
+    }],
+    vqc1: [{
+      name: 'VQC',
+      val: 'vqc01'
+    }],
+    ppc: [{
+      name: 'PPC - 01 - Generator',
+      val: 'ppc01'
+    },
+    {
+      name: 'PPC - 02 - Generator',
+      val: 'ppc02'
+    }, {
+      name: 'PPC - 03 - Transformer',
+      val: 'ppc03'
+    }, {
+      name: 'PPC - 04 - Transformer',
+      val: 'ppc04'
+    }, {
+      name: 'PPC - 05 - Transformer',
+      val: 'ppc05'
+    }],
+    murthynayanicheruvu: [{
+      name: 'murthynayanicheruvu',
+      val: 'murthynayanicheruvu'
+    }],
+    vijayamalyaguesthouse: [{
+      name: 'vijayamalya guest house',
+      val: 'vijayamalyaguesthouse'
+    }],
+
+    th7mail: [{
+      name: '7th Mail',
+      val: '7thmail'
+    }],
+
+    japalitheertham: [{
+      name: 'japalitheertham',
+      val: 'japalitheertham'
+    }]
+
   };
-  
 
   // lineChart
   public lineChartData: Array<any> = [
